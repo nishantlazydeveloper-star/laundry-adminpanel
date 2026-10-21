@@ -156,10 +156,10 @@ export const initialOrders = orders.map((order, index) => ({
   pickupStart: routeDetails[index][1],
 }));
 export const initialSettings = {
-  name: "Nishant Ingle",
+  name: "Nishant Ingle ",
   email: "admin@laundro.com",
-  business: "Laundro HQ",
-  phone: "+1 (415) 555-0128",
+  business: "Laundro",
+  phone: "+ 8888888888",
   currency: "USD",
   timezone: "Asia/Kolkata",
   emailNotifications: true,
