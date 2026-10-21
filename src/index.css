@@ -907,6 +907,8 @@ h1 {
   width: 100%;
 }
 .table-scroll {
+  /* Contain absolute screen-reader labels within the table's scrollport. */
+  position: relative;
   overflow-x: auto;
 }
 table {
@@ -2818,12 +2820,6 @@ input.toggle:checked:before {
   }
 }
 @media (max-width: 760px) {
-  html,
-  body {
-    max-width: 100%;
-    overflow-x: hidden;
-    overflow-x: clip;
-  }
   #root,
   .app-shell,
   .main-shell,
