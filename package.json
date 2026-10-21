@@ -1,0 +1,32 @@
+{
+  "name": "laundro-admin",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "oxlint",
+    "preview": "vite preview",
+    "test": "playwright test",
+    "test:unit": "node --test tests/admin.test.js",
+    "format": "prettier --write src index.html vite.config.js playwright.config.js tests"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "lucide-react": "^1.61.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "recharts": "^3.10.1",
+    "tailwindcss": "^4.3.3"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.64.1",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "oxlint": "^1.88.0",
+    "prettier": "^3.9.10",
+    "vite": "^8.3.4"
+  }
+}
