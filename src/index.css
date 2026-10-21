@@ -2788,6 +2788,81 @@ input.toggle:checked:before {
     font-size: 9px;
   }
 }
+/* Keep wide order tables inside their own scroll region on narrow screens. */
+@media (max-width: 1000px) {
+  .orders-panel,
+  .orders-panel .table-scroll {
+    min-width: 0;
+    max-width: 100%;
+  }
+  .orders-panel .table-scroll {
+    width: 100%;
+    contain: inline-size;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+  }
+  .orders-panel .table-toolbar,
+  .orders-panel .table-tools,
+  .orders-panel .table-search {
+    min-width: 0;
+    max-width: 100%;
+  }
+  .orders-panel .table-tools {
+    flex-wrap: wrap;
+  }
+  .orders-panel .table-search {
+    flex: 1 1 140px;
+  }
+  .orders-panel .table-footer {
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 760px) {
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+    overflow-x: clip;
+  }
+  #root,
+  .app-shell,
+  .main-shell,
+  .topbar,
+  main {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+  }
+  .sidebar {
+    max-width: calc(100vw - 24px);
+    overflow-x: hidden;
+  }
+  .breadcrumb,
+  .header-actions,
+  .global-search {
+    min-width: 0;
+    max-width: 100%;
+  }
+  .header-actions {
+    flex-shrink: 1;
+  }
+  .global-search input {
+    max-width: 100%;
+  }
+  .stats-grid,
+  .charts-grid,
+  .bottom-grid,
+  .charts-grid > *,
+  .bottom-grid > * {
+    min-width: 0;
+    max-width: 100%;
+  }
+  .revenue-chart,
+  .donut-container {
+    min-width: 0;
+    contain: inline-size;
+  }
+}
 @media (prefers-reduced-motion: reduce) {
   *,
   *:before,
