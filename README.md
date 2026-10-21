@@ -26,4 +26,4 @@ npm run preview
 
 Reusable UI, charts, and order table components live in `src/components`; static demo data lives in `src/data/demo.js`. Chart code loads separately to keep the initial bundle smaller.
 
-Demo changes are held in React state and reset on refresh. There is no login, API, or backend. Plus Jakarta Sans loads from Google Fonts, with a local sans-serif fallback. All financial amounts use USD, and dates use an October 2026 demo dataset.
+Demo changes are held in React state and reset on refresh. There is no login, API, or backend. Plus Jakarta Sans loads from Google Fonts, with a local sans-serif fallback. All financial amounts use INR with Indian digit grouping and two decimal places (for example, ₹1,500.00), and dates use an October 2026 demo dataset.

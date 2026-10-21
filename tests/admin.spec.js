@@ -117,7 +117,7 @@ test("new orders validate names, calculate totals, update routes and group exist
   await page.getByLabel("Customer name").fill("Olivia Rhye");
   await page.getByLabel("Service", { exact: true }).selectOption("Wash & Iron");
   await page.getByLabel("Number of items").fill("3");
-  await expect(page.locator(".order-estimate")).toContainText("$16.50");
+  await expect(page.locator(".order-estimate")).toContainText("₹16.50");
   await page.getByRole("button", { name: "Create order", exact: true }).click();
   await expect(page.locator("tbody tr")).toHaveCount(6);
   await openOrder(page, "LND-1029");

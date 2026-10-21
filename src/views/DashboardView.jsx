@@ -11,7 +11,7 @@ import {
 } from "lucide-react";
 import { Panel, StatCard, TextLink } from "../components/UI";
 import { OrdersTable } from "../components/OrdersTable";
-import { initialOrders, statuses } from "../data/demo";
+import { initialOrders, money, statuses } from "../data/demo";
 import { getCustomers } from "../lib/admin";
 const RevenueChart = lazy(() =>
   import("../components/Charts").then((module) => ({
@@ -71,11 +71,7 @@ export function DashboardView({
         />
         <StatCard
           label="Total revenue"
-          value={new Intl.NumberFormat("en-US", {
-            style: "currency",
-            currency: "USD",
-            maximumFractionDigits: 0,
-          }).format(
+          value={money(
             september
               ? 21364
               : 24580 +

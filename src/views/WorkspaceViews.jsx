@@ -502,9 +502,9 @@ export function SettingsView({ settings, onSave }) {
               onChange={update}
               aria-describedby="currency-note"
             >
-              <option value="USD">USD — US Dollar</option>
+              <option value="INR">INR — Indian Rupee (₹)</option>
             </select>
-            <small id="currency-note">Demo prices are listed in USD.</small>
+            <small id="currency-note">Demo prices are listed in INR (₹).</small>
           </label>
           <label>
             Timezone

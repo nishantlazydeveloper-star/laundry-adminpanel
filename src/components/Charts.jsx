@@ -79,7 +79,7 @@ export function RevenueChart({ month = "2026-10" }) {
         <ResponsiveContainer width="100%" height="100%">
           <AreaChart
             data={data}
-            margin={{ top: 14, right: 10, left: -15, bottom: 0 }}
+            margin={{ top: 14, right: 10, left: 0, bottom: 0 }}
           >
             <defs>
               <linearGradient id="revenueGradient" x1="0" y1="0" x2="0" y2="1">
@@ -100,12 +100,13 @@ export function RevenueChart({ month = "2026-10" }) {
               dy={10}
             />
             <YAxis
+              width={82}
               axisLine={false}
               tickLine={false}
               tick={{ fill: "#8a94a6", fontSize: 10 }}
               ticks={[0, 1000, 2000, 3000]}
               domain={[0, 3000]}
-              tickFormatter={(v) => (v === 0 ? "$0" : `$${v / 1000}k`)}
+              tickFormatter={money}
             />
             <Tooltip
               formatter={(v) => money(v)}

@@ -22,7 +22,7 @@ import {
   Sparkles,
   ExternalLink,
 } from "lucide-react";
-import { initialOrders, initialSettings, notifications } from "./data/demo";
+import { initialOrders, initialSettings, money, notifications } from "./data/demo";
 import { Avatar, FocusScope, Toast } from "./components/UI";
 import { AdminDialogs } from "./components/AdminDialogs";
 import { OrdersTable } from "./components/OrdersTable";
@@ -173,7 +173,7 @@ export default function App() {
         "Service",
         "Items",
         "Date",
-        "Amount (USD)",
+        "Amount (INR)",
         "Order status",
         "Payment status",
       ],
@@ -184,7 +184,7 @@ export default function App() {
         order.service,
         order.items,
         order.date,
-        order.amount.toFixed(2),
+        money(order.amount),
         order.status,
         order.payment,
       ]),
@@ -202,7 +202,7 @@ export default function App() {
         "Customer",
         "Date",
         "Method",
-        "Amount (USD)",
+        "Amount (INR)",
         "Payment status",
       ],
       records.map((order) => [
@@ -211,7 +211,7 @@ export default function App() {
         order.name,
         order.date,
         transaction(order).method,
-        order.amount.toFixed(2),
+        money(order.amount),
         order.payment,
       ]),
     );

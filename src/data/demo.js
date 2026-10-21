@@ -95,15 +95,16 @@ export const notifications = [
   },
   {
     title: "Payment received",
-    body: "$42.50 received for order #LND-1027.",
+    body: "₹42.50 received for order #LND-1027.",
     time: "32 minutes ago",
     type: "payment",
   },
 ];
 export const money = (value) =>
-  new Intl.NumberFormat("en-US", {
+  new Intl.NumberFormat("en-IN", {
     style: "currency",
-    currency: "USD",
+    currency: "INR",
+    minimumFractionDigits: 2,
     maximumFractionDigits: 2,
   }).format(value);
 
@@ -160,7 +161,7 @@ export const initialSettings = {
   email: "admin@laundro.com",
   business: "Laundro",
   phone: "+ 8888888888",
-  currency: "USD",
+  currency: "INR",
   timezone: "Asia/Kolkata",
   emailNotifications: true,
 };
